@@ -1,5 +1,5 @@
 {
-  "name": "@ux-practice/styles",
+  "name": "@sunset-ux/styles",
   "version": "1.0.8",
   "description": "Global styles for the project",
   "main": "src/index.css",

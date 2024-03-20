@@ -1,5 +1,5 @@
 {
-  "name": "@ux-practice/core",
+  "name": "@sunset-ux/core",
   "workspaces": [
     "packages/*"
   ],
