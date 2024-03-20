@@ -1,6 +1,6 @@
 {
   "name": "@ux-practice/styles",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Global styles for the project",
   "main": "src/index.css",
   "scripts": {
