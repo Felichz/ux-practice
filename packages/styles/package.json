@@ -1,6 +1,6 @@
 {
   "name": "@sunset-ux/styles",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Global styles for the project",
   "main": "src/index.css",
   "scripts": {
