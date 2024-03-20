@@ -1,0 +1,239 @@
+@import '@ux-practice/styles';
+
+.select-container {
+  display: inline-block;
+  font-family: var(--font-family-components);
+  font-size: var(--font-size-default);
+  width: 100%;
+  max-width: 300px;
+}
+
+.select-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-family-components);
+  font-size: var(--font-size-default);
+}
+
+.select {
+  position: relative;
+  width: 100%;
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+
+    &-sm {
+      width: 12px;
+      height: 12px;
+    }
+
+    &-lg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-value {
+    outline: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 200ms;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-primary-focus);
+    }
+
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-primary-focus);
+    }
+  }
+
+  &-selected-option {
+    display: flex;
+    align-items: center;
+  }
+
+  &-placeholder {
+    color: var(--color-disabled-text);
+  }
+
+  &-arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--color-disabled-text);
+    transition: transform 200ms;
+  }
+
+  &-open &-arrow {
+    transform: rotate(180deg);
+  }
+
+  &-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: var(--shadow-black-subtle);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 200ms;
+
+    &:hover {
+      background-color: var(--color-primary-hover-light);
+    }
+
+    &-selected {
+      background-color: var(--color-primary-light);
+    }
+
+    &-error {
+      &:hover {
+        background-color: var(--color-destructive-hover-light);
+      }
+
+      &.select-option-selected {
+        background-color: var(--color-destructive-light);
+      }
+    }
+
+    &-warning {
+      &:hover {
+        background-color: var(--color-warning-hover-light);
+      }
+
+      &.select-option-selected {
+        background-color: var(--color-warning-light);
+      }
+    }
+
+    &-success {
+      &:hover {
+        background-color: var(--color-success-hover-light);
+      }
+
+      &.select-option-selected {
+        background-color: var(--color-success-light);
+      }
+    }
+  }
+
+  &-sm {
+    font-size: 12px;
+
+    .select-value {
+      padding: 6px 10px;
+      height: 30px;
+    }
+
+    .select-option {
+      padding: 6px 10px;
+    }
+  }
+
+  &-md {
+    .select-value {
+      height: 36px;
+    }
+  }
+
+  &-lg {
+    font-size: 16px;
+
+    .select-value {
+      padding: 10px 14px;
+      height: 42px;
+    }
+
+    .select-option {
+      padding: 10px 14px;
+    }
+  }
+
+  &-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+    .select-value {
+      pointer-events: none;
+    }
+  }
+
+  &-error {
+    .select-value {
+      border-color: transparent;
+      box-shadow: var(--shadow-destructive-focus);
+
+      &:hover {
+        border-color: var(--color-destructive);
+      }
+
+      &:focus,
+      &:active {
+        border-color: var(--color-destructive);
+        box-shadow: var(--shadow-destructive-active);
+      }
+    }
+  }
+
+  &-warning {
+    .select-value {
+      border-color: var(--color-warning);
+      box-shadow: var(--shadow-warning-focus);
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        box-shadow: var(--shadow-warning-active);
+      }
+    }
+  }
+
+  &-success {
+    .select-value {
+      border-color: transparent;
+      box-shadow: var(--shadow-success-focus);
+
+      &:hover {
+        border-color: var(--color-success);
+      }
+
+      &:focus,
+      &:active {
+        border-color: var(--color-success);
+        box-shadow: var(--shadow-success-active);
+      }
+    }
+  }
+}

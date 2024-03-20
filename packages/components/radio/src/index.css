@@ -1,0 +1,217 @@
+@import '@ux-practice/styles';
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-components);
+  font-size: var(--font-size-default);
+  margin-bottom: 16px;
+
+  &-label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  &-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &-error {
+    .radio-icon {
+      border-color: var(--color-destructive-focus-light);
+      background-color: var(--color-destructive-hover-light);
+    }
+  }
+
+  &-warning {
+    .radio-icon {
+      border-color: var(--color-warning-focus-light);
+      background-color: var(--color-warning-hover-light);
+    }
+  }
+
+  &-success {
+    .radio-icon {
+      border-color: var(--color-success-focus-light);
+      background-color: var(--color-success-hover-light);
+    }
+  }
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+
+  input {
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover + .radio-icon {
+      border-color: var(--color-primary);
+    }
+
+    &:focus + .radio-icon {
+      background-color: var(--color-primary-hover-light);
+      box-shadow: var(--shadow-primary-focus);
+      border-color: var(--color-primary);
+    }
+
+    &:active + .radio-icon {
+      box-shadow: var(--shadow-primary-active);
+    }
+
+    &:checked + .radio-icon {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+    }
+
+    &:checked:hover + .radio-icon {
+      background-color: var(--color-primary-hover);
+    }
+
+    &:disabled + .radio-icon {
+      opacity: 0.6;
+      cursor: not-allowed;
+      background-color: var(--color-disabled);
+      border-color: var(--color-disabled-border);
+      box-shadow: none;
+
+      &:hover {
+        background-color: var(--color-disabled);
+        border-color: var(--color-disabled-border);
+        box-shadow: none;
+      }
+    }
+  }
+
+  &-lg input {
+    width: 22px;
+    height: 22px;
+  }
+
+  &-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+
+    &-lg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-label {
+    font-family: var(--font-family-components);
+    font-size: var(--font-size-default);
+  }
+
+  &-error {
+    input {
+      &:hover + .radio-icon {
+        background-color: var(--color-destructive-hover-light);
+        border-color: var(--color-destructive);
+      }
+
+      &:focus + .radio-icon {
+        background-color: var(--color-destructive-hover-light);
+        box-shadow: var(--shadow-destructive-focus);
+        border-color: var(--color-destructive);
+      }
+
+      &:active + .radio-icon {
+        box-shadow: var(--shadow-destructive-active);
+      }
+
+      &:checked + .radio-icon {
+        background-color: var(--color-destructive);
+        border-color: var(--color-destructive);
+      }
+
+      &:checked:hover + .radio-icon {
+        background-color: var(--color-destructive-hover);
+      }
+    }
+  }
+
+  &-warning {
+    input {
+      &:hover + .radio-icon {
+        background-color: var(--color-warning-hover-light);
+        border-color: var(--color-warning);
+      }
+
+      &:focus + .radio-icon {
+        background-color: var(--color-warning-hover-light);
+        box-shadow: var(--shadow-warning-focus);
+        border-color: var(--color-warning);
+      }
+
+      &:active + .radio-icon {
+        box-shadow: var(--shadow-warning-active);
+      }
+
+      &:checked + .radio-icon {
+        background-color: var(--color-warning);
+        border-color: var(--color-warning);
+      }
+
+      &:checked:hover + .radio-icon {
+        background-color: var(--color-warning-hover);
+      }
+    }
+  }
+
+  &-success {
+    input {
+      &:hover + .radio-icon {
+        border-color: var(--color-success);
+        background-color: var(--color-success-hover-light);
+      }
+
+      &:focus + .radio-icon {
+        background-color: var(--color-success-hover-light);
+        box-shadow: var(--shadow-success-focus);
+        border-color: var(--color-success);
+      }
+
+      &:active + .radio-icon {
+        box-shadow: var(--shadow-success-active);
+      }
+
+      &:checked + .radio-icon {
+        background-color: var(--color-success);
+        border-color: var(--color-success);
+      }
+
+      &:checked:hover + .radio-icon {
+        background-color: var(--color-success-hover);
+      }
+    }
+  }
+}
+
+.radio-icon {
+  display: inline-block;
+  pointer-events: none;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-focus-light);
+  background-color: var(--color-primary-hover-light);
+  transition: all 150ms;
+  margin-right: 6px;
+
+  &-md {
+    width: 16px;
+    height: 16px;
+  }
+
+  &-lg {
+    width: 20px;
+    height: 20px;
+  }
+}

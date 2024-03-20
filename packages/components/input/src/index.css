@@ -1,0 +1,131 @@
+@import '@ux-practice/styles';
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  max-width: 300px;
+  min-width: 150px;
+}
+
+.input-label {
+  font-family: var(--font-family-components);
+  font-size: var(--font-size-default);
+  margin-bottom: 8px;
+  margin-left: 2px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input {
+  box-sizing: border-box;
+  font-family: var(--font-family-components);
+  font-size: var(--font-size-default);
+  padding: 8px 12px;
+  padding-right: 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  transition: all 150ms;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-primary-active);
+  }
+
+  &-underline {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover {
+      border-bottom: 1px solid var(--color-primary);
+    }
+
+    &:focus {
+      box-shadow: none;
+      border-bottom: 3px solid var(--color-primary);
+    }
+  }
+
+  &-filled {
+    background-color: var(--color-primary-light);
+    border: none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      background-color: white;
+      box-shadow: var(--shadow-primary-active);
+    }
+  }
+
+  &-error {
+    box-shadow: var(--shadow-destructive-focus);
+    border-color: var(--color-destructive);
+
+    &:focus {
+      box-shadow: var(--shadow-destructive-active);
+    }
+  }
+
+  &-sm {
+    padding: 6px 10px;
+  }
+
+  &-lg {
+    padding: 10px 14px;
+  }
+
+  &-disabled {
+    background-color: var(--color-disabled);
+    color: var(--color-disabled-text);
+    cursor: not-allowed;
+  }
+}
+
+.input-icon {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 8px);
+
+  & svg {
+    max-width: 16px;
+    max-height: 16px;
+  }
+}
+
+.input-footer {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px;
+}
+
+.input-hint {
+  font-family: var(--font-family-components);
+  font-size: 12px;
+  color: var(--color-disabled-text);
+  margin-right: 6px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input-character-count {
+  font-family: var(--font-family-components);
+  font-size: 12px;
+  color: var(--color-disabled-text);
+  margin-left: auto;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}

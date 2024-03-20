@@ -1,0 +1,24 @@
+{
+  "name": "@ux-practice/button",
+  "version": "1.0.7",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && vite build && npm run build:css",
+    "build:css": "postcss src/**/*.css --dir dist/css",
+    "test": "jest",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "gitHead": "54aa2ecd510b93362da26e28d2c5439a13bbe8f8"
+}

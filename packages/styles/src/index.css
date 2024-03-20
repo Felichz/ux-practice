@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --shadow-size-focus: 0 0 0 2px;
+  --shadow-size-active: 0 0 0 3px;
+  --shadow-black: 0px 3px 4px 3px rgba(0, 0, 0, 0.1);
+  --shadow-black-subtle: 0px 3px 4px 3px rgba(0, 0, 0, 0.05);
+
+  --color-primary: #e65c00;
+  --color-primary-text: #ffffff;
+  --color-primary-hover: #cc5200;
+  --color-primary-active: #b34700;
+  --color-primary-light: #e65c0066;
+  --color-primary-hover-light: #e65c0033;
+  --color-primary-focus-light: #e65c0080;
+  --shadow-primary: 0 2px 4px var(--color-primary-light);
+  --shadow-primary-focus: var(--shadow-size-focus)
+    var(--color-primary-focus-light);
+  --shadow-primary-active: var(--shadow-size-active)
+      var(--color-primary-focus-light),
+    var(--shadow-black);
+
+  --color-secondary: #4a9e96;
+  --color-secondary-text: #ffffff;
+  --color-secondary-hover: #408b83;
+  --color-secondary-active: #367971;
+  --color-secondary-light: #4a9e9666;
+  --color-secondary-focus-light: #4a9e9680;
+  --shadow-secondary: 0 2px 4px var(--color-secondary-light);
+  --shadow-secondary-focus: var(--shadow-size-focus)
+    var(--color-secondary-focus-light);
+  --shadow-secondary-active: var(--shadow-size-active)
+      var(--color-secondary-focus-light),
+    var(--shadow-black);
+
+  --color-tertiary: transparent;
+  --color-tertiary-text: #e65c00;
+  --color-tertiary-hover: var(--color-tertiary-hover-light);
+  --color-tertiary-hover-light: #e65c001a;
+  --shadow-tertiary-focus: var(--shadow-size-focus)
+    var(--color-tertiary-focus-light);
+  --color-tertiary-focus-light: #e65c0080;
+
+  --color-success: #2ea44f;
+  --color-success-text: #ffffff;
+  --color-success-hover: #2c974b;
+  --color-success-active: #298e46;
+  --color-success-light: #2ea44f66;
+  --color-success-hover-light: #2ea44f33;
+  --color-success-focus-light: #2ea44f80;
+  --shadow-success: 0 2px 4px var(--color-success-light);
+  --shadow-success-focus: var(--shadow-size-focus)
+    var(--color-success-focus-light);
+  --shadow-success-active: var(--shadow-size-active)
+      var(--color-success-focus-light),
+    var(--shadow-black);
+
+  --color-warning: #e0a000;
+  --color-warning-text: #ffffff;
+  --color-warning-hover: #c78f00;
+  --color-warning-active: #ad7f00;
+  --color-warning-light: #e0a00066;
+  --color-warning-hover-light: #e0a00033;
+  --color-warning-focus-light: #e0a00080;
+  --shadow-warning: 0 2px 4px var(--color-warning-light);
+  --shadow-warning-focus: var(--shadow-size-focus)
+    var(--color-warning-focus-light);
+  --shadow-warning-active: var(--shadow-size-active)
+      var(--color-warning-focus-light),
+    var(--shadow-black-subtle);
+
+  --color-destructive: #c41428;
+  --color-destructive-text: #ffffff;
+  --color-destructive-hover: #a91023;
+  --color-destructive-active: #8e0d1d;
+  --color-destructive-light: #c4142866;
+  --color-destructive-hover-light: #c4142833;
+  --color-destructive-focus-light: #c4142880;
+  --shadow-destructive: 0 2px 4px var(--color-destructive-light);
+  --shadow-destructive-focus: var(--shadow-size-focus)
+    var(--color-destructive-focus-light);
+  --shadow-destructive-active: var(--shadow-size-active)
+      var(--color-destructive-focus-light),
+    var(--shadow-black-subtle);
+
+  --color-disabled: #eeeeee;
+  --color-disabled-text: #757575;
+  --color-disabled-border: #dddddd;
+  --shadow-disabled: none;
+
+  --font-family-default: 'Open Sans', sans-serif;
+  --font-family-components: 'Inter', sans-serif;
+  --font-size-default: 14px;
+}

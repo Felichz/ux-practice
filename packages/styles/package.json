@@ -1,0 +1,12 @@
+{
+  "name": "@ux-practice/styles",
+  "version": "1.0.6",
+  "description": "Global styles for the project",
+  "main": "src/index.css",
+  "scripts": {
+    "build": "postcss src/**/*.css --dir dist/css"
+  },
+  "author": "",
+  "license": "MIT",
+  "gitHead": "54aa2ecd510b93362da26e28d2c5439a13bbe8f8"
+}

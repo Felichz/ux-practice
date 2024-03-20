@@ -1,0 +1,18 @@
+@import '@ux-practice/styles';
+
+.text {
+  font-family: var(--font-family-default);
+  margin: 0;
+
+  &-sm {
+    font-size: 14px;
+  }
+
+  &-md {
+    font-size: 16px;
+  }
+
+  &-lg {
+    font-size: 18px;
+  }
+}

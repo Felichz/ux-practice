@@ -1,0 +1,197 @@
+@import '@ux-practice/styles';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-family: var(--font-family-components);
+  font-size: var(--font-size-default);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 200ms;
+  height: 36px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-sm {
+    padding: 6px 12px;
+  }
+
+  &-lg {
+    padding: 12px 24px;
+  }
+
+  &-primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary-text);
+    border: 1px solid var(--color-primary);
+    box-shadow: var(--shadow-primary);
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    &:focus {
+      box-shadow: var(--shadow-primary-focus);
+    }
+
+    &:active {
+      background-color: var(--color-primary-active);
+      box-shadow: var(--shadow-primary-active);
+    }
+  }
+
+  &-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+    border: 1px solid var(--color-secondary);
+    box-shadow: var(--shadow-secondary);
+
+    &:hover {
+      background-color: var(--color-secondary-hover);
+    }
+
+    &:focus {
+      box-shadow: var(--shadow-secondary-focus);
+    }
+
+    &:active {
+      background-color: var(--color-secondary-active);
+      box-shadow: var(--shadow-secondary-active);
+    }
+  }
+
+  &-tertiary {
+    padding: 2px 6px;
+    height: unset;
+    border: none;
+    background-color: var(--color-tertiary);
+    color: var(--color-tertiary-text);
+    transition: all 100ms;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-tertiary-hover);
+    }
+
+    &:active {
+      background-color: var(--color-tertiary-hover);
+      box-shadow: var(--shadow-tertiary-focus);
+    }
+  }
+
+  &-success {
+    background-color: var(--color-success);
+    color: var(--color-success-text);
+    border: 1px solid var(--color-success);
+    box-shadow: var(--shadow-success);
+
+    &:hover {
+      background-color: var(--color-success-hover);
+    }
+
+    &:focus {
+      box-shadow: var(--shadow-success-focus);
+    }
+
+    &:active {
+      background-color: var(--color-success-active);
+      box-shadow: var(--shadow-success-active);
+    }
+  }
+
+  &-warning {
+    background-color: var(--color-warning);
+    color: var(--color-warning-text);
+    border: 1px solid var(--color-warning);
+    box-shadow: var(--shadow-warning);
+
+    &:hover {
+      background-color: var(--color-warning-hover);
+    }
+
+    &:focus {
+      box-shadow: var(--shadow-warning-focus);
+    }
+
+    &:active {
+      background-color: var(--color-warning-active);
+      box-shadow: var(--shadow-warning-active);
+    }
+  }
+
+  &-destructive {
+    background-color: var(--color-destructive);
+    color: var(--color-destructive-text);
+    border: 1px solid var(--color-destructive);
+    box-shadow: var(--shadow-destructive);
+
+    &:hover {
+      background-color: var(--color-destructive-hover);
+    }
+
+    &:focus {
+      box-shadow: var(--shadow-destructive-focus);
+    }
+
+    &:active {
+      background-color: var(--color-destructive-active);
+      box-shadow: var(--shadow-destructive-active);
+    }
+  }
+
+  &-disabled {
+    background-color: var(--color-disabled);
+    color: var(--color-disabled-text);
+    border: 1px solid var(--color-disabled-border);
+    box-shadow: var(--shadow-disabled);
+    cursor: not-allowed;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--color-disabled);
+      box-shadow: var(--shadow-disabled);
+    }
+  }
+
+  &-loading {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &-loading-spinner {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--color-disabled-text);
+    border-top-color: #ccc;
+    animation: spin 1.5s linear infinite;
+    margin-right: 6px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &-icon {
+    margin-right: 8px;
+    line-height: 0;
+
+    & svg {
+      max-width: 16px;
+      max-height: 16px;
+    }
+  }
+}
